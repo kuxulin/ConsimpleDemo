@@ -1,0 +1,6 @@
+@ConsimpleDemo_HostAddress = http://localhost:5075
+
+GET {{ConsimpleDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
