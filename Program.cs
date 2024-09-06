@@ -11,9 +11,10 @@ public class Program
 
         builder.Services.AddDatabaseAndEntities(builder.Configuration.GetConnectionString("DatabaseConnection"));
 
+        builder.Services.AddRepositories();
+        builder.Services.AddServices();
         builder.Services.AddControllers();
-       
-        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddEndpointsApiExplorer(); 
         builder.Services.AddSwaggerGen();
 
         var app = builder.Build();
@@ -26,9 +27,6 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-
-        app.UseAuthorization();
-
 
         app.MapControllers();
 
